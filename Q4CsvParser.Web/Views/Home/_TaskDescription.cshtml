@@ -1,0 +1,68 @@
+﻿<div class="well">
+    <h3>Task Description</h3>
+    <div>
+        Our product manager has given us the below requirements so we wrote an application to meet the critera. However we entirely forgot to write certain sections of the application. We would like you to do us a huge favour and finish the sections that we didn't get to.
+    </div>
+    <h3>User Story</h3>
+        We have a customer who wants to create a web based CSV visualization application.
+    <h3>Acceptance criteria</h3>
+    <ul>
+        <li>
+            Application must run properly from end to end without any further modifications. The following is expected from a submitted solution:
+            <ul>
+                <li>Open .sln file in Visual Studio</li>
+                <li>Click F5 or Debug | Start Debugging</li>
+                <li>Select File and set "Does the file contain a header?" accordingly</li>
+                <li>Click Submit</li>
+                <li>A formatted view (in grid or table) should appear</li>
+            </ul>
+        </li>
+        <li>As a user I should be able to upload a CSV file with or without a header.</li>
+        <li>As a user I should be able to upload a CSV file with a variable number of columns and data types.</li>
+        <li>As a user I should be able to see the CSV file content on the web page in a formatted view.</li>
+    </ul>
+    <h3>Additional Details</h3>
+    <ul>
+        <li>You may not use any 3rd party code other than what we've given you (or is specified in comments).</li>
+        <li>Feel free to create as many helper functions as you desire. You can add helper classes as well, but if you do they are expected to be unit tested (or at the very least, unit-testable).</li>
+        <li>We've written the contracts for the services out, but if you disagree with them, or find optimizations, feel free to make changes (but expect to justify them to us).</li>
+        <li>You are required to unit test the parsing and validation logic. You can use any unit testing and mocking tools desired.</li>
+    </ul>
+    <h3>Base Tasks</h3>
+    <p>
+        You can find the base tasks in the following files
+        <ul>
+            <li>Q4CsvParser.Web/Views/Home/FormattedDisplay.cshtml</li>
+            <li>Q4CsvParser.Web/Core/ValidationService.cs</li>
+            <li>Q4CsvParser.Web/Core/FileService.cs</li>
+            <li>Q4CsvParser.Web/Core/ParsingService.cs</li>
+            <li>Q4CsvParser.Test.Unit/ParsingServiceTest.cs</li>
+            <li>Q4CsvParser.Test.Unit/ValidationServiceTest.cs</li>
+        </ul>
+    </p>
+    <h3>Test Files</h3>
+    <p>
+        You can find files to test the application with in the solution folder.
+        <br />
+        We weren't super careful about making sure the files were uniform or used the correct line endings. (oops)
+    </p>
+    <h3>Bonus Tasks</h3>
+    <p>
+        There are several ways to earn bonus marks. There's no penalty to not completing bonus marks, but if your base requirements are not met, they are worth nothing.
+        <br/>
+        The tasks are detailed in the files they relate to. You can find bonus tasks in the following files:
+        <ul>
+            <li>Design Patterns: Q4CsvParser.Web/Core/FileService.cs</li>
+            <li>Integration Tests: Q4CsvParser.Test.Integration/CsvFileHandlerTest.cs</li>
+            <li>Dependency Injection: Q4CsvParser.Web/Controllers/HomeController.cs</li>
+            <li>Client Side Validation: Q4CsvParser.Web/Controllers/HomeController.cs</li>
+        </ul>
+    </p>
+    
+    <h3>Hard Mode (For Over-Achievers only)</h3>
+    <div>
+        Create a new page that lists all the uploaded files and lets you click on them to show the formatted display.
+        <br />
+        Make sure that your base application meets all criteria before trying this. If you don't finish this part, your base application should be fully functional.
+    </div>
+</div>

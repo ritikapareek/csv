@@ -1,0 +1,19 @@
+﻿@model Q4CsvParser.Web.Models.FileUploadModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+@Html.Partial("~/Views/Home/_TaskDescription.cshtml")
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.File)
+        @Html.TextBoxFor(m => m.File, new {type="file", names="file"})
+        @Html.LabelFor(m => m.ContainsHeader)
+        @Html.CheckBoxFor(m => m.ContainsHeader)
+    </div>
+    <input class="btn btn-primary" type="submit" />
+}

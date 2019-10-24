@@ -1,0 +1,33 @@
+﻿@model Q4CsvParser.Web.Models.FormattedDisplayModel
+
+@{
+    ViewBag.Title = "Formatted Display";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Data from <strong>@Model.OriginalFileName</strong></h2>
+
+@* TODO Fill in the logic to create a view here *@
+<table class="csvData csvData table table-striped table-bordered">
+
+    @if (Model.CsvTable.HeaderRow != null)
+    {
+        <tr>
+            @foreach (var column in Model.CsvTable.HeaderRow.Columns)
+            {
+                <th>@column</th>
+            }
+        </tr>
+    }
+
+    @foreach (var row in Model.CsvTable.Rows)
+    {
+        <tr>
+            @foreach (var column in row.Columns)
+            {
+                <td>@column</td>
+            }
+        </tr>
+    }
+
+</table>
